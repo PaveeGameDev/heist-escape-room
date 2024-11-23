@@ -50,7 +50,7 @@ function App() {
                     style={inputStyle}
                 />
             </div>
-            {password === 'blue' && (
+            {password.toLowerCase().includes('blue') && (
                 <div style={sectionStyle}>
                     <h2>Prologue for Next Week</h2>
                     <audio controls>
