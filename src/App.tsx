@@ -42,6 +42,7 @@ function App() {
             <h1>Heist Super Secret Website</h1>
             <div>
                 <h2>Are you a human?</h2>
+                <h3>Solve this CAPTCHA</h3>
                 <p>What's the color of THE man's clothes?</p>
                 <input
                     type="text"
