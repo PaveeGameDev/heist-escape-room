@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 function App() {
     const [password, setPassword] = useState<string>('');
+    const [passwordTwo, setPasswordTwo] = useState<string>('');
 
     const styles: React.CSSProperties = {
         display: 'flex',
@@ -28,22 +29,13 @@ function App() {
         textAlign: 'center',
     };
 
-    const sectionStyle: React.CSSProperties = {
-        marginTop: '20px',
-        padding: '20px',
-        border: '2px solid #ffd700',
-        borderRadius: '10px',
-        backgroundColor: '#111',
-        boxShadow: '0 4px 10px rgba(255, 215, 0, 0.3)',
-    };
-
     return (
         <div style={styles}>
-            <h1>Heist Super Secret Website</h1>
+            <h1>Black market</h1>
             <div>
                 <h2>Are you a human?</h2>
                 <h3>Solve this CAPTCHA</h3>
-                <p>What's the color of THE man's clothes?</p>
+                <p>I’m not sure I can ___ fast enough.</p>
                 <input
                     type="text"
                     placeholder="Type your answer"
@@ -51,13 +43,26 @@ function App() {
                     style={inputStyle}
                 />
             </div>
-            {password.toLowerCase().includes('blue') && (
-                <div style={sectionStyle}>
-                    <h2>Prologue for Next Week</h2>
-                    <audio controls>
-                        <source src="monolog.mp3" type="audio/mp3" />
-                        Your browser does not support the audio tag.
-                    </audio>
+            {password.toLowerCase().includes('run') && (
+                <div>
+                    <h2>We still don't believe you</h2>
+                    <ol>
+                        <li>Move 5 left</li>
+                        <li>Move 4 right</li>
+                        <li>Move 2 right</li>
+                        <li>Move 3 left</li>
+                    </ol>
+                    <input
+                        type="number"
+                        placeholder="Type your answer"
+                        onChange={(input) => setPasswordTwo(input.target.value)}
+                        style={inputStyle}
+                    />
+                </div>
+            )}
+            {passwordTwo.toLowerCase().includes('4397') && (
+                <div>
+                    <p>The number is: 87579</p>
                 </div>
             )}
         </div>
